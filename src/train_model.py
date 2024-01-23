@@ -72,7 +72,7 @@ if __name__ == '__main__':
         
         logisticRegr = LogisticRegression()
         logisticRegr.fit(X, y)
-        logisticRegr.predict(X)
+        y_predict = logisticRegr.predict(X)
 
         mlflow.log_metrics({'Accuracy': accuracy_score(y, y_predict),
                             'F1 Score': f1_score(y, y_predict)})
